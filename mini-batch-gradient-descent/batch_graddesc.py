@@ -6,6 +6,7 @@ np.random.seed(42)
 # TODO: Fill in code in the function below to implement a gradient descent
 # step for linear regression, following a squared error rule. See the docstring
 # for parameters and returned variables.
+# MSEStep => MEAN SQUARED ERROR STEP
 def MSEStep(X, y, W, b, learn_rate=0.005):
     """
     This function implements the gradient descent step for squared error as a
@@ -24,6 +25,14 @@ def MSEStep(X, y, W, b, learn_rate=0.005):
     """
 
     # Fill in code
+
+    # compute errors
+    y_pred = np.matmul(X, W) + b
+    error = y - y_pred
+
+    # compute steps
+    W_new = W + learn_rate * np.matmul(error, X)
+    b_new = b + learn_rate * error.sum()
     return W_new, b_new
 
 
@@ -31,6 +40,7 @@ def MSEStep(X, y, W, b, learn_rate=0.005):
 # button. The gradient descent step will be performed multiple times on
 # the provided dataset, and the returned list of regression coefficients
 # will be plotted.
+# miniBatchGD => Mini Batch Gradinet Descent
 def miniBatchGD(X, y, batch_size=20, learn_rate=0.005, num_iter=25):
     """
     This function performs mini-batch gradient descent on a given dataset.
