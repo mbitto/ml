@@ -41,7 +41,7 @@ def MSEStep(X, y, W, b, learn_rate=0.005):
 # the provided dataset, and the returned list of regression coefficients
 # will be plotted.
 # miniBatchGD => Mini Batch Gradinet Descent
-def miniBatchGD(X, y, batch_size=20, learn_rate=0.005, num_iter=25):
+def miniBatchGD(X, y, batch_size=2, learn_rate=0.005, num_iter=100):
     """
     This function performs mini-batch gradient descent on a given dataset.
 
@@ -74,9 +74,9 @@ def miniBatchGD(X, y, batch_size=20, learn_rate=0.005, num_iter=25):
 
 if __name__ == "__main__":
     # perform gradient descent
-    data = np.loadtxt('data.csv', delimiter=',')
-    X = data[:, :-1]
-    y = data[:, -1]
+    data = np.loadtxt('data-short.csv', delimiter=',')
+    X = data[:, :-1]  # all the x coords from the points
+    y = data[:, -1]  # all the y coords from the points
     regression_coef = miniBatchGD(X, y)
 
     # plot the results
