@@ -13,10 +13,12 @@ def MSEStep(X, y, W, b, learn_rate=0.005):
     performance metric.
 
     Parameters
-    X : array of predictor features
-    y : array of outcome values
+    X : array of predictor features (Training data)
+    y : array of outcome values (Target values)
+
     W : predictor feature coefficients
     b : regression function intercept
+    
     learn_rate : learning rate
 
     Returns
@@ -88,7 +90,7 @@ if __name__ == "__main__":
     counter = len(regression_coef)
     for W, b in regression_coef:
         counter -= 1
-        color = [0, 0, 0]
+        color = [1 - 0.92 ** counter for _ in range(3)]
         plt.plot([X_min, X_max], [X_min * W + b, X_max * W + b], color=color)
     plt.scatter(X, y, zorder=3)
     plt.show()
