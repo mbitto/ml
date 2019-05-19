@@ -3,7 +3,7 @@ import numpy as np
 np.random.seed(42)
 
 
-# TODO: Fill in code in the function below to implement a gradient descent
+# Fill in code in the function below to implement a gradient descent
 # step for linear regression, following a squared error rule. See the docstring
 # for parameters and returned variables.
 # MSEStep => MEAN SQUARED ERROR STEP
