@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "/Users/manuelb/anaconda3/bin/python"
+    "python.pythonPath": "/Users/manuelb/anaconda3/bin/python",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#51065E",
+        "titleBar.activeBackground": "#710983",
+        "titleBar.activeForeground": "#FEFBFF"
+    }
 }
