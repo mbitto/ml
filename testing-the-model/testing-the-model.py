@@ -20,7 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Instantiate your decision tree model
 model = DecisionTreeClassifier(
-    max_depth=10, min_samples_leaf=5, min_samples_split=5)
+    max_depth=10, min_samples_leaf=5, min_samples_split=6)
 
 model.fit(X_train, y_train)
 
